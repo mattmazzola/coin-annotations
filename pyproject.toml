@@ -1,0 +1,11 @@
+[project]
+name = "coin-annotations"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "typer>=0.15.3",
+    "youtube-dl>=2021.12.17",
+    "yt-dlp>=2025.4.30",
+]

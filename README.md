@@ -1,5 +1,17 @@
 # COIN Dataset
 
+## Setup
+
+```sh
+uv sync
+```
+
+## Download
+
+```sh
+uv run download_videos.py --limit 20
+```
+
 > [COIN](https://coin-dataset.github.io/) is the currently largest dataset for comprehensive instruction video analysis. It contains 11,827 videos of 180 different tasks (i.e., car polishing, make French fries) related to 12 domains (i.e., vehicle, dish). All videos are collected from YouTube and annotated with an efficient [toolbox](https://github.com/coin-dataset/annotation-tool).
 
 

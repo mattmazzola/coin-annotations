@@ -180,3 +180,6 @@ datasets/
 
 # Secrets and Environment variables
 .env*.local
+
+# Cookies
+*cookies.txt

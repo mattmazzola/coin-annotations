@@ -6,6 +6,17 @@
 uv sync
 ```
 
+## Get cookie.txt from your local PC
+
+### Install Chrome/Edge extension
+
+[Get cookies.txt LOCALLY](https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc)
+
+### Go to [Youtube.com](https://www.youtube.com/) and Sign in
+### Export cookies.txt
+
+![alt text](docs/image.png)
+
 ## Download
 
 ```sh

@@ -57,32 +57,36 @@ You may use the codes and files for research only, including sharing and modifyi
 
 ### Taxonomy
 
-The COIN is organized in a hierarchical structure, which contains three levels: `domain`, `task` and `step`. The corresponding relationship can be found at taxonomy [link]. We provide the taxonomy file of COIN in csv format. Below, we show a small part of the texonomy stored in [`taxonomy.xlsx`](taxonomy.xlsx): 
+The COIN is organized in a hierarchical structure, which contains three levels: `domain`, `task` and `step`. The corresponding relationship can be found at [`taxonomy.xlsx`](taxonomy.xlsx).
+
+#### Sample
+
+Below, we show a small part of the taxonomy stored in [`taxonomy.xlsx`](taxonomy.xlsx): 
 
 <table>
 <tr><th>domain_target_mapping </th><th>target_action_mapping</th></tr>
 <tr><td><table></table>
 
-| Domains             | Targets                      | 
-| ------------------- | ---------------------------- |
-| ...		      | ...			     |
-| Vehicle             | ChangeCarTire		     |
-| Vehicle	      | InstallLicensePlateFrame     |
-| ...		      | ...			     |
-| Gadgets	      | ReplaceCDDriveWithSSD	     |
+| Domains | Targets                  |
+| ------- | ------------------------ |
+| ...     | ...                      |
+| Vehicle | ChangeCarTire            |
+| Vehicle | InstallLicensePlateFrame |
+| ...     | ...                      |
+| Gadgets | ReplaceCDDriveWithSSD    |
 
 </td><td>
 
 
-| Target Id           | Target Label                 | Action Id             | Action Label  		|   
-| ------------------- | ---------------------------- | --------------------- | ------------------------ |		
-| ...		      | ...			     | ...		     | ...		  	|
-| 13                  | ChangeCarTire		     | 259		     | unscrew the screw        |
-| 13	              | ChangeCarTire                | 260		     | jack up the car		|
-| 13		      | ChangeCarTire	             | 261		     | remove the tire          |
-| 13	      	      | ChangeCarTire	 	     | 262		     | put on the tire          |
-| 13	      	      | ChangeCarTire	     	     | 263		     | tighten the screws	|
-| ...		      | ...			     | ...		     | ...			|
+| Target Id | Target Label  | Action Id | Action Label       |
+| --------- | ------------- | --------- | ------------------ |
+| ...       | ...           | ...       | ...                |
+| 13        | ChangeCarTire | 259       | unscrew the screw  |
+| 13        | ChangeCarTire | 260       | jack up the car    |
+| 13        | ChangeCarTire | 261       | remove the tire    |
+| 13        | ChangeCarTire | 262       | put on the tire    |
+| 13        | ChangeCarTire | 263       | tighten the screws |
+| ...       | ...           | ...       | ...                |
 
 </td></tr> </table>
 
@@ -123,19 +127,18 @@ From the entry, we can easily retrieve the Youtube ID, duration, ROI and procedu
 
 The annotation information is saved in [`COIN.json`](COIN.json).
 
-| Field Name          | Type                         | Example          | Description                                                                                                           |
-| ------------------- | ---------------------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------- |
-| `database`          | string                          | -             | Key filed of the annotation file.                                                                                             |
-| -                   | string                       | `LtRSn-ntcLY`         | Youtube ID of the video.                                                                                              |
-| `duration`          | float                        | 56.640895694775196   | Duration of the video in seconds.                                                        |
-| `class`             | string                       | `ReplaceCDDriveWithSSD`   | Name of the task in the video.                                                                           |
-| `video_url`    | string                       | `https://www.youtube.com/embed/LtRSn-ntcLY`   | Url of the video.                                                                             |
-| `start`       | float                          | 56.640895694775196          | Start time of the ROI of the video. |
-| `end`        | float                          | 85.714362947023          | End time of the ROI of the video.  |
-| `subset`    | string                       | `training` or `validation`           | Subset of the video.                                                                                                |
-| `recipe_type`              | int                       | 131          | ID number of the task.                                                                                       |
-| `annotation`              | string                       | -        | Annotation information of the video.                                                                                 |
-| `annotation`:`id`        | int                          | 212              | ID number of the procedure.                                                                                |
-| `annotation`:`label`       | string                          | `take out the laptop CD drive`             | Name of the procedure.                                                                                |
-| `annotation`:`segment`         | list of float (len=2)   | `[60.0,69.0]`     | Start and end time of the procedure.                                                                          |
-
+| Field Name             | Type                  | Example                                     | Description                          |
+| ---------------------- | --------------------- | ------------------------------------------- | ------------------------------------ |
+| `database`             | string                | -                                           | Key filed of the annotation file.    |
+| -                      | string                | `LtRSn-ntcLY`                               | Youtube ID of the video.             |
+| `duration`             | float                 | 56.640895694775196                          | Duration of the video in seconds.    |
+| `class`                | string                | `ReplaceCDDriveWithSSD`                     | Name of the task in the video.       |
+| `video_url`            | string                | `https://www.youtube.com/embed/LtRSn-ntcLY` | Url of the video.                    |
+| `start`                | float                 | 56.640895694775196                          | Start time of the ROI of the video.  |
+| `end`                  | float                 | 85.714362947023                             | End time of the ROI of the video.    |
+| `subset`               | string                | `training` or `validation`                  | Subset of the video.                 |
+| `recipe_type`          | int                   | 131                                         | ID number of the task.               |
+| `annotation`           | string                | -                                           | Annotation information of the video. |
+| `annotation`:`id`      | int                   | 212                                         | ID number of the procedure.          |
+| `annotation`:`label`   | string                | `take out the laptop CD drive`              | Name of the procedure.               |
+| `annotation`:`segment` | list of float (len=2) | `[60.0,69.0]`                               | Start and end time of the procedure. |

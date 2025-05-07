@@ -1,30 +1,44 @@
 # COIN Dataset
 
+> [COIN](https://coin-dataset.github.io/) is the currently largest dataset for comprehensive instruction video analysis. It contains 11,827 videos of 180 different tasks (i.e., car polishing, make French fries) related to 12 domains (i.e., vehicle, dish). All videos are collected from YouTube and annotated with an efficient [toolbox](https://github.com/coin-dataset/annotation-tool).
+
 ## Setup
+
+### Install packages
 
 ```sh
 uv sync
 ```
 
-## Get cookie.txt from your local PC
+### Get cookie.txt from your local PC
 
-### Install Chrome/Edge extension
+1. Install Chrome/Edge extension
 
 [Get cookies.txt LOCALLY](https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc)
 
-### Go to [Youtube.com](https://www.youtube.com/) and Sign in
-### Export cookies.txt
+1. Go to [Youtube.com](https://www.youtube.com/) and Sign in
+1. Export cookies.txt
 
 ![alt text](docs/image.png)
 
-## Download
+1. Copy the cookies.txt file to machine you intend to run `yt-dlp`
+1. Note the path you copied the file releative to the download_videos.py
+   
+## Download Videos
 
 ```sh
-uv run download_videos.py --limit 20
+uv run download_videos.py
 ```
 
-> [COIN](https://coin-dataset.github.io/) is the currently largest dataset for comprehensive instruction video analysis. It contains 11,827 videos of 180 different tasks (i.e., car polishing, make French fries) related to 12 domains (i.e., vehicle, dish). All videos are collected from YouTube and annotated with an efficient [toolbox](https://github.com/coin-dataset/annotation-tool).
+### Example showing options
 
+```sh
+uv run download_videos.py \
+--output_path /data/COIN/videos \
+--cookies_path ./www.youtube.com_cookies.txt \
+--offset 20
+--limit 5
+```
 
 ## Authors and Contributors
 <p>

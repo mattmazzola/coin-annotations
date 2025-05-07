@@ -11,8 +11,10 @@
             "module": "download_videos",
             "python": ".venv/bin/python",
             "args": [
-                "--limit",
+                "--offset",
                 "20",
+                "--limit",
+                "5",
             ]
         }
     ]

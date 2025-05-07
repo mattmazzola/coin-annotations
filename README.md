@@ -14,12 +14,12 @@ uv sync
 
 1. Install Chrome/Edge extension
 
-[Get cookies.txt LOCALLY](https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc)
+    [Get cookies.txt LOCALLY](https://chromewebstore.google.com/detail/get-cookiestxt-locally/cclelndahbckbenkjhflpdbgdldlbecc)
 
 1. Go to [Youtube.com](https://www.youtube.com/) and Sign in
 1. Export cookies.txt
 
-![alt text](docs/image.png)
+    ![alt text](docs/image.png)
 
 1. Copy the cookies.txt file to machine you intend to run `yt-dlp`
 1. Note the path you copied the file releative to the download_videos.py
